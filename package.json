@@ -1,0 +1,23 @@
+{
+  "name": "pixel-bounce",
+  "version": "1.0.0",
+  "description": "Pixel Bounce is a simple tap game built using Phaser v2",
+  "private": true,
+  "author": "Code Sphinx",
+  "dependencies": {},
+  "scripts": {
+    "start": "npm run build && webpack-dev-server --port=3000",
+    "build": "webpack --mode=development",
+    "deploy": "webpack  --mode=production --config webpack.config.production.js"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "phaser-ce": "^2.15.0",
+    "raw-loader": "^4.0.0",
+    "terser-webpack-plugin": "^2.3.5",
+    "transform-json-webpack-plugin": "0.0.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

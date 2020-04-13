@@ -1,0 +1,8 @@
+Name: Pixel Bounce
+File: game.bundle.js
+Generated on: {date}
+Version: {version}
+Author: CodeSphinx <https://twitter.com/codesphinx>
+Description: Tap game built using Phaser 3
+Copyright: Demyasoft LLC 2020
+License: Apache License 2.0

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dungeon Stew</title>
+  <meta name="author" content="DemyaSoft">
+  <meta name="description" content="Join the JRPG adventure to protect the princess and prevent the Empire from destroying your world.">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#362E3F">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      color: #444;
+      font-family: 'Helvetica', 'Verdana', sans-serif;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    html {
+      overflow: hidden;
+    }
+    body {
+      align-content: stretch;
+      align-items: stretch;
+      background: #ececec;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+    /**
+    * Header
+    */
+    .header {
+      align-content: center;
+      align-items: stretch;
+      background: #362E3F;
+      box-shadow:
+        0 4px 5px 0 rgba(0, 0, 0, 0.14),
+        0 2px 9px 1px rgba(0, 0, 0, 0.12),
+        0 4px 2px -2px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      font-size: 20px;
+      height: 56px;
+      justify-content: flex-start;
+      padding: 16px 16px 0 16px;
+      position: fixed;
+      transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
+      width: 100%;
+      will-change: transform;
+      z-index: 1000;
+    }
+    .header h1 {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+    }
+    .header .powered-by {
+      color: white;
+      font-size: 0.6em;
+      text-decoration: none;
+    }
+    .main {
+      flex: 1;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-top: 60px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 2px;
+      box-shadow:
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      margin: 16px;
+      padding: 16px;
+      text-align: center;
+      position: relative;
+    }
+    .card > img {
+        width: 100%;
+        max-width: 512px;
+    }
+    .offline-panda {
+      display: block;
+      margin-bottom: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>
+      Dungeon Stew
+    </h1>
+  </header>
+  <main class="main">
+    <div class="card">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAADVASEA3S2w8SlBVWEhFYn1WQ2R0eiBrnDCJ4GafrKpwMbtnSceZXN68cPXkGJ7Rx/D1wuz+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsll3AAAAEAdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wBT9wclAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAdQ0lEQVR4Xu3d3a5rSXKdUf9Ili1Zluz3f9d24sO42GCiFjYOC2QuMsZlZGRw5Zlxt9Fd/+Uf46vNAny5WYAvNwvw5WYBvtwswJebBfhyswBfbhbgy80CfLlZgC83C/DlZgG+3CzAl5sF+HKzAF9uFuDLzQJ8uVmALzcL8OVmAb7cLMCXmwX4crMAX24W4MvNAny5WYAvNwvw5WYBvtwswJebBfhyswBfbhbgy80CfLlZgC83C/DlZgG+3CzAl5sF+HKzAF9uFuBJ//zDv/6gFK1HmgV4kowj+yhF65FmAZ4k48g+StF6pFmAJ8k4so9StB5pFuBJMo7soxStR5oFeJKMI/soReuRZgGeJOPIPkrReqRZgCfJOLKPUrQeaRbgSTKO7KMUrUeaBXiSjCP7KEXrkWYBniTjyD5K0XqkWYAnyTiyj1K0HmkW4Ekyzn/+YA/iOK4dYxbgSXKN7CP7OI5rx5gFeJJcI/vIPo7j2jFmAZ4k18g+so/juHaMWYAnyTWyj+zjOK4dYxbgSXKN7CP7OI5rx5gFeJJcI/vIPo7j2jFmAZ4k18g+so/juHaMWYAnyTWyj+zjOK4dYxbgSXKN7CP7OI5rx5gFeJJcI/vIPo7j2jFmAZ4k18g+so/juHaMWYAnyTXyzv/7QSmuHWMW4Emyj4wj+yjFtWPMAjxJ9pFxZB+luHaMWYAnyT4yjuyjFNeOMQvwJNlHxpF9lOLaMWYBniT7yDiyj1JcO8YswJNkHxlH9lGKa8eYBXiS7CPjyD5Kce0YswBPkn1kHNlHKa4dYxbgSbKPjCP7KMW1Y8wCPEn2kXFkH6W4doxZgCfJPjKO7KMU144xC/Ak2cffgTaO49oxZgGeJNfIe+M4rh1jFuBJco28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" alt="" class="offline-hero">
+      <div>
+        Oops, you appear to be offline, this app requires an internet connection.
+      </div>
+    </div>
+  </main>
+</body>
+</html>
